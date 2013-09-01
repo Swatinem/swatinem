@@ -1,7 +1,6 @@
 var path = require('path');
 
-var Articles = require('./lib/articles');
-var articles = Articles({
+require('./lib')({
 	dir: path.join(__dirname, 'articles'),
 	output: path.join(__dirname, 'generated'),
 	templates: path.join(__dirname, 'templates')

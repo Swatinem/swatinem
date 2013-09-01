@@ -22,13 +22,9 @@ And after those two newlines is when the actual content starts
 ## Example nginx config
 
 ```
-        location /news {
+        location / {
                 root /var/www/generated;
+                try_files $uri $uri.html $uri.xml $uri/index.html index.html @node;
                 try_files /index.html @node;
-        }
-
-        location ~ ^/news/(.+)$ {
-                root /var/www/generated;
-                try_files /$1 /$1.html @node;
         }
 ```

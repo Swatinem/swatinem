@@ -5,6 +5,8 @@
 	"dependencies": {
 		"jade": "*",
 		"marked": "*",
-		"moment": "*"
+		"moment": "*",
+		"mkdirp": "*",
+		"remove": "*"
 	}
 }
